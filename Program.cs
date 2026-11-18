@@ -13,14 +13,14 @@ if (!app.Environment.IsDevelopment())
     app.UseHsts();
 }
 
-app.UseHttpsRedirection();
-app.UseRouting();
+app.UseHttpsRedirection(); 
+app.UseRouting(); //! Sendo habilitado para entender rotas (URLs). 
 
-app.UseAuthorization();
+app.UseAuthorization(); //! Sendo habilitado para fazer logins.
 
 app.MapStaticAssets();
 
-app.MapControllerRoute(
+app.MapControllerRoute( 
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}")
     .WithStaticAssets();
